@@ -1,0 +1,22 @@
+{
+  "name": "tessel-neopixel",
+  "version": "0.0.0",
+  "description": "drive a Neopixel Strip with a Tessel 2 Microcontroller",
+  "main": "index.js",
+  "dependencies": {
+    "johnny-five": "^2.1.0",
+    "neopixels": "^0.0.5",
+    "t2-cli": "^0.1.23",
+    "tessel-io": "^1.3.0",
+    "ws": "^8.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "Tessel"
+  ],
+  "license": "AGPL-v3-or-later"
+}
