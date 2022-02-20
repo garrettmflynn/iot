@@ -1,14 +1,9 @@
   var tessel = require('tessel');
   var http = require('http');
   var wsServer = require('./ws');
-  const settings = require("./settings.js")
-
-  // Node.js
   var fs = require('fs');
   var url = require('url');
 
-    // const Neopixels = require('neopixels')
-    // const neopixels = new Neopixels();
 
   var server = http.createServer(function (request, response) {
     // Break up the url into easier-to-use parts
@@ -31,8 +26,8 @@
   const wss = new wsServer(server)
 
     // Starting Server
-  server.listen(settings.websocket.port);
-  console.log(`Server running at http://${settings.websocket.endpoint}:${settings.websocket.port}/`);
+  server.listen(80);
+  console.log(`Server running at http://albert.local`);
 
   // Respond to the request with our index.html page
   function showIndex (url, request, response) {
@@ -40,7 +35,7 @@
     response.writeHead(200, {"Content-Type": "text/html"});
 
     // Use fs to read in index.html
-    fs.readFile(__dirname + '/public/index.html', function (err, content) {
+    fs.readFile(__dirname + '/../public/index.html', function (err, content) {
       // If there was an error, throw to stop code execution
       if (err) {
         throw err;
